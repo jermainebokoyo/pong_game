@@ -60,8 +60,9 @@ def show_score():
     )
 
 def keep_on_screen(paddle, y):
-    if y > 250:
-        return 250
+    # Stay under the score line. The paddle is 100px tall.
+    if y > 200:
+        return 200
     if y < -250:
         return -250
     return y
